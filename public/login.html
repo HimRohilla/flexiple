@@ -1,0 +1,31 @@
+
+		<div class="row" ng-app="mainApp" ng-controller="LoginController">
+			<div class="row center">
+				<h4>Login</h4>
+			</div>
+			<form name="loginForm" novalidate>
+				<div class="row">
+					<div class="col s12 m4 l4"></div>
+					<div class="input-field col s12 m4 l4 center">
+						<input id="username" name="username" ng-model="formData.username" maxlength="100" type="text" class="validate center" required/>
+						<label for="username">Username</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12 m4 l4"></div>
+					<div class="input-field col s12 m4 l4 center">
+						<input id="password" name="password" ng-model="formData.password" maxlength="100" type="password" class="validate center" required/>
+						<label for="password">Password</label>
+					</div>
+				</div>
+				<div class="row" ng-show="someError" style="color:red">
+					<div class="col s12 m4 l4"></div>
+					<div class="input-field col s12 m4 l4 center">
+						{{someErrorMessage}}
+					</div>
+				</div>				
+				<div class="row center">
+					<button class="waves-effect waves-light btn changeColour" ng-disabled="loginForm.$invalid" ng-click="loginUser(formData);"><i class="material-icons right">send</i>Login</button>
+				</div>
+			</form>
+		</div>		

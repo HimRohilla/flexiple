@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <script type="text/javascript" src="../includes/jquery-3.1.1.min.js"></script> -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
+	
+	<title>Login/Register</title>
+	<style type="text/css">
+		body {
+		  display: flex;
+		  min-height: 100vh;
+		  flex-direction: column;
+		}
+		main {
+		  flex: 1 0 auto;
+		}
+		.changeColour {
+			background-color: #5B9279;
+		}		
+	</style>	
+</head>
+<body>
+	<nav class="changeColour">
+		<div class="nav-wrapper">
+			<a href="#" class="brand-logo">Flexiple Login<i class="material-icons">accessibility</i></a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="#/register">Register</a></li>
+				<li><a href="#/login">Login</a></li>
+			</ul>
+		</div>
+	</nav>
+	<main>
+	  <div ng-app="mainApp">
+		<ng-view></ng-view>
+	  </div>
+	</main>
+	<footer class="page-footer" style="background-color:#5B9279">
+		<div class="container">
+			<div class="row">
+				<div class="white-text center">Flexiple Login</div>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="/public/js/main/main.js"></script>
+	<script type="text/javascript" src="/public/js/controller/loginController.js"></script>
+	<script type="text/javascript" src="/public/js/controller/registerController.js"></script>
+	<!-- <script type="text/javascript" src="/public/js/controller/profileController.js"></script> -->
+</body>
+</html>

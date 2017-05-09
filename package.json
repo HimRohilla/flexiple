@@ -1,0 +1,19 @@
+{
+  "name": "FlexipleProject",
+  "version": "1.0.0",
+  "description": "This is a demo project",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.1",
+    "express-session": "^1.15.2",
+    "mysql": "^2.13.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "main": "server.js"
+}
