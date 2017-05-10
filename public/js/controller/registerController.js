@@ -14,7 +14,6 @@ mainApp.controller('RegisterController', ['$scope', '$http', function($scope, $h
 		$scope.checkDetails();
 	}
 	$scope.checkDetails = function() {
-		console.log($scope.formData);
 		var formData = $scope.formData;
 		var format = /[!@#$%^&*()+\-=\[\]{};':"\\|,.<>\/?A-Z0-9]+/;
 		var emailFormat = /[@]/;
@@ -33,6 +32,10 @@ mainApp.controller('RegisterController', ['$scope', '$http', function($scope, $h
 		else if(formData.username !== undefined && formData.username.substr(formData.username.length - 3, 3) != ".in") {
 			$scope.detailsCorrectMessage = "only .in domain emails are allowed";
 			$scope.detailsIncorrect = true;
+		}
+		else if(formData.password !== undefined && (formData.password.length < 4 || formData.password.length > 8)) {
+			$scope.detailsCorrectMessage = "Password length must be between 4 to 8 characters";
+			$scope.detailsIncorrect = true;			
 		}
 		else if(formData.password !== undefined && (formData.password.replace(/[^A-Z]/g, "").length != 2 || formData.password.replace(/[^!@#$%^&*()+\-=\[\]{};':"\\|,.<>\/?]/g, "").length != 2)) {
 			$scope.detailsCorrectMessage = "Password must contains 2 uppercase letter and 2 special characters";
