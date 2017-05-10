@@ -3,15 +3,7 @@ var app = express();
 var router = express.Router();
 var fs = require('fs');
 var constants = require(path_to_app_constants);
-var cookieParser = require('cookie-parser');
-var session = require('express-session');
 var bodyParser = require('body-parser');
-app.use(cookieParser());
-app.use(session({ 
-	secret: constants.session_secret,
-	resave: true,
-	saveUninitialized: true
-}));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
