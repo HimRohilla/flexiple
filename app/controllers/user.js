@@ -30,7 +30,7 @@ router.post('/loginHandler', function(req, res) {
 			functions.sendResponse(res, {success: true});
 		}
 		else {
-			functions.sendResponse(res, {success: false, message: "Sorry some error occured"});
+			functions.sendResponse(res, {success: false, message: "User not registered"});
 		}
 	}, function(err) {
 		functions.sendResponse(res, {success: false, message: "Sorry some error occured"});
